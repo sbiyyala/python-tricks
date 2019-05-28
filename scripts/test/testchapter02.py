@@ -1,9 +1,9 @@
-from unittest import TestCase
+import unittest
 
 from scripts.ch02 import apply_discount
 
 
-class TestChapter02(TestCase):
+class TestChapter02(unittest.TestCase):
 
     def test_apply_discount(self):
         shoes = {'name': 'Fancy Shoes', 'price': 14900}
@@ -13,3 +13,7 @@ class TestChapter02(TestCase):
         shoes = {'name': 'Fancy Shoes', 'price': 100}
         with self.assertRaises(AssertionError):
             apply_discount(shoes, -1)
+
+
+if __name__ == '__main__':
+    unittest.main()
